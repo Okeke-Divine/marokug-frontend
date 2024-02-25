@@ -1,13 +1,30 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marokug</title>
+  <!-- icons -->
+  <link rel="stylesheet" id="font_awesome_all_css" href="">
+  <link rel="stylesheet" id="font_awesome_v4_shims_css" href="">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+<script type="text/javascript">
+  const hostname = window.location.hostname;
+  const font_awesome_all_css = document.getElementById("font_awesome_all_css");
+  const font_awesome_v4_shims_css = document.getElementById("font_awesome_v4_shims_css");
+  if (hostname == 'localhost') {
+    font_awesome_all_css.setAttribute('href', 'http://localhost:8081/privCdn/fontawesome/css/all.css');
+    font_awesome_v4_shims_css.setAttribute('href', 'http://localhost:8081/privCdn/fontawesome/css/v4-shims.css');
+  } else {
+    font_awesome_all_css.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+    font_awesome_v4_shims_css.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/v4-shims.min.css');
+  }
+</script>
+
 </html>
