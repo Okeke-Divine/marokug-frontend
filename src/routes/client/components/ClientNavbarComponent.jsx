@@ -6,7 +6,8 @@ export default function ClientNavbarComponent() {
       <div className="sticky top-0 bg-white p-5 flex justify-between items-center border-b-2 border-gray-100">
         <div className="p-2 pr-3 pl-3 rounded-xl border-gray-200 border-2 flex gap-x-2 wd-fit">
           <input
-            placeholder="What would you like to learn?)"
+          type="search"
+            placeholder="What would you like to learn?"
             className="bg-transparent w-80 outline-none"
           />
           <button>
