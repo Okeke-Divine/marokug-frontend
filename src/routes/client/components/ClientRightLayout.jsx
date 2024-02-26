@@ -116,7 +116,7 @@ export default function ClientRightLayout() {
               {/* data summary */}
               <div className="grid gird-cols-1 lg:grid-cols-4 mt-5 gap-5">
                 {overviewData.map((data, index) => (
-                  <div key={index} className="bg-white hover:shadow-lg cursor-pointer">
+                  <div key={index} className="bg-white hover:shadow-lg cursor-pointer shadow-md">
                     <div className="p-5">
                       <div className="w-full text-center">
                         <h2 className={`${data.style.text} text-3xl`}>
@@ -132,7 +132,7 @@ export default function ClientRightLayout() {
                 ))}
               </div>
               {/* watch video lessons */}
-              <div className="mt-5 bg-white p-5 rounded-lg shadow-sm">
+              <div className="mt-5 bg-white p-5 rounded-lg shadow-md">
                 <div>
                   <h2 className="font-bold text-xl">Watch Video Lesson</h2>
                   {/* video lessons container */}
