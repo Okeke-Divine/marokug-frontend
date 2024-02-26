@@ -1,3 +1,5 @@
+import SiteLogo from "../../../assets/images/marokug-logo.png";
+
 export default function Sidebar({ Config }) {
   const sideBarLinks = [
     {
@@ -64,8 +66,13 @@ export default function Sidebar({ Config }) {
     <div className="h-screen overflow-y-auto bg-white">
       {/* name and logo */}
       <div className="pt-10 pb-10">
-        <div className="flex font-semibold text-3xl justify-center">
-          {Config.site_name}
+        <div className="flex items-center justify-center gap-3 w-full">
+          <div>
+            <img src={SiteLogo} className="w-7" />
+          </div>
+          <div className="flex font-semibold text-3xl justify-center">
+            {Config.site_name}
+          </div>
         </div>
       </div>
       {/* side bar links */}
