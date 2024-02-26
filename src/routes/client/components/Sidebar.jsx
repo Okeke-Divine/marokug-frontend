@@ -63,14 +63,14 @@ export default function Sidebar({ Config }) {
     },
   ];
   return (
-    <div className="h-screen overflow-y-auto bg-white">
+    <div className="h-screen overflow-y-auto bg-gray-800">
       {/* name and logo */}
       <div className="pt-10 pb-10">
         <div className="flex items-center justify-center gap-3 w-full">
           <div>
             <img src={SiteLogo} className="w-7" />
           </div>
-          <div className="flex font-semibold text-3xl justify-center">
+          <div className="flex font-semibold text-3xl justify-center text-white">
             {Config.site_name}
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Sidebar({ Config }) {
         {sideBarLinks.map((link, index) => (
             <div
               key={index}
-              className={`hover:bg-blue-400 hover:text-white cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
+              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
                 link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
               }`}
             >
@@ -94,7 +94,7 @@ export default function Sidebar({ Config }) {
         {paymentLinks.map((link, index) => (
             <div
               key={index}
-              className={`hover:bg-blue-400 hover:text-white cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
+              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
                 link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
               }`}
             >
@@ -108,7 +108,7 @@ export default function Sidebar({ Config }) {
         {contactLinks.map((link, index) => (
             <div
               key={index}
-              className={`hover:bg-blue-400 hover:text-white cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
+              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
                 link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
               }`}
             >

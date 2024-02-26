@@ -1,5 +1,6 @@
-import ClientNavbarComponent from "./ClientNavbarComponent";
-import PracticeExam from "./PracticeExam";
+import ClientNavbarComponent from "./ClientNavbarComponent.jsx";
+import PracticeExam from "./PracticeExam.jsx";
+import LiveClasses from "./LiveClasses.jsx"
 
 export default function ClientRightLayout() {
   const overviewData = [
@@ -149,6 +150,8 @@ export default function ClientRightLayout() {
               </div>
               {/* Practice exam */}
               <PracticeExam />
+              {/* live classes */}
+              <LiveClasses />
             </div>
           </div>
           <div className="w-full lg:w-2/5">s</div>
