@@ -11,7 +11,7 @@ export default function ClientNavbarComponent() {
             className="bg-transparent w-80 outline-none"
           />
           <button>
-            <i class="fi fi-rs-search"></i>
+          <i className="fi fi-rr-search"></i>
           </button>
         </div>
         {/* navbar right section */}

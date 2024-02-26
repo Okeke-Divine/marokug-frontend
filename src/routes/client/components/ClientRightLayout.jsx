@@ -1,4 +1,5 @@
 import ClientNavbarComponent from "./ClientNavbarComponent";
+import PracticeExam from "./PracticeExam";
 
 export default function ClientRightLayout() {
   const overviewData = [
@@ -38,19 +39,19 @@ export default function ClientRightLayout() {
   const subjects = [
     {
         name:"Mathematics",
-        icon: <i class="fi fi-tr-calculator-simple"></i>,
+        icon: <i className="fi fi-tr-calculator-simple"></i>,
         bg: "bg-red-400",
         hoverBg: "hover:bg-red-500"
     },
     {
         name:"Biology",
-        icon: <i class="fi fi-tr-bacteria"></i>,
+        icon: <i className="fi fi-tr-bacteria"></i>,
         bg: "bg-orange-400",
         hoverBg: "hover:bg-orange-500"
     },
     {
         name:"Chemistry",
-        icon: <i class="fi fi-tr-flask-potion"></i>,
+        icon: <i className="fi fi-tr-flask-potion"></i>,
         bg: "bg-green-400",
         hoverBg: "hover:bg-green-500"
     },
@@ -62,31 +63,31 @@ export default function ClientRightLayout() {
     },
     {
         name:"Literature",
-        icon: <i class="fi fi-tr-diary-bookmark-down"></i>,
+        icon: <i className="fi fi-tr-diary-bookmark-down"></i>,
         bg: "bg-blue-400",
         hoverBg: "hover:bg-orange-500"
     },
     {
         name:"English",
-        icon: <i class="fi fi-tr-answer-alt"></i>,
+        icon: <i className="fi fi-tr-answer-alt"></i>,
         bg: "bg-rose-400",
         hoverBg: "hover:bg-rose-500"
     },
     {
         name:"Economics",
-        icon: <i class="fi fi-tr-stats"></i>,
+        icon: <i className="fi fi-tr-stats"></i>,
         bg: "bg-emerald-400",
         hoverBg: "hover:bg-emerald-500"
     },
     {
         name:"Government",
-        icon: <i class="fi fi-tr-government-flag"></i>,
+        icon: <i className="fi fi-tr-government-flag"></i>,
         bg: "bg-orange-400",
         hoverBg: "hover:bg-orange-500"
     },
     {
         name:"F Accounting",
-        icon: <i class="fi fi-tr-calculator-money"></i>,
+        icon: <i className="fi fi-tr-calculator-money"></i>,
         bg: "bg-blue-300",
         hoverBg: "hover:bg-blue-400"
     }
@@ -146,6 +147,8 @@ export default function ClientRightLayout() {
                   </div>
                 </div>
               </div>
+              {/* Practice exam */}
+              <PracticeExam />
             </div>
           </div>
           <div className="w-full lg:w-2/5">s</div>

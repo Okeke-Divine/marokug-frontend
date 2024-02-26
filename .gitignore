@@ -9,6 +9,8 @@ lerna-debug.log*
 
 automated-git.bat
 
+*.TODO
+
 node_modules
 dist
 dist-ssr

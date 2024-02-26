@@ -46,19 +46,19 @@ export default function Sidebar({ Config }) {
   const paymentLinks = [
     {
       name: "Buy Learning Plan",
-      icon: <i class="fi fi-tr-cart-arrow-down"></i>,
+      icon: <i className="fi fi-tr-cart-arrow-down"></i>,
       active: false,
     },
     {
       name: "Manage Subscriptions",
-      icon: <i class="fi fi-tr-hand-holding-usd"></i>,
+      icon: <i className="fi fi-tr-hand-holding-usd"></i>,
       active: false,
     },
   ];
   const contactLinks = [
     {
       name: "Contact Support",
-      icon: <i class="fi fi-tr-user-headset"></i>,
+      icon: <i className="fi fi-tr-user-headset"></i>,
       active: false,
     },
   ];
@@ -78,7 +78,6 @@ export default function Sidebar({ Config }) {
       {/* side bar links */}
       <div className="pl-5 pr-5">
         {sideBarLinks.map((link, index) => (
-          <>
             <div
               key={index}
               className={`hover:bg-blue-400 hover:text-white cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
@@ -88,13 +87,11 @@ export default function Sidebar({ Config }) {
               <div>{link.icon}</div>
               <div>{link.name}</div>
             </div>
-          </>
         ))}
         <div className="p-5">
           <hr className="" />
         </div>
         {paymentLinks.map((link, index) => (
-          <>
             <div
               key={index}
               className={`hover:bg-blue-400 hover:text-white cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
@@ -104,13 +101,11 @@ export default function Sidebar({ Config }) {
               <div>{link.icon}</div>
               <div>{link.name}</div>
             </div>
-          </>
         ))}
         <div className="p-5">
           <hr className="" />
         </div>
         {contactLinks.map((link, index) => (
-          <>
             <div
               key={index}
               className={`hover:bg-blue-400 hover:text-white cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
@@ -120,7 +115,6 @@ export default function Sidebar({ Config }) {
               <div>{link.icon}</div>
               <div>{link.name}</div>
             </div>
-          </>
         ))}
       </div>
     </div>
