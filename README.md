@@ -4,4 +4,4 @@ Frontend code for (https://marokug.vercel.app)
 
 
 ## CREDITS
- - Icons: Flaticons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+ - Icons: Flaticons by <a href="https://www.flaticon.com/uicons" target="_blank">Flaticon</a>
