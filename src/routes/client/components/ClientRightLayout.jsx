@@ -38,55 +38,55 @@ export default function ClientRightLayout() {
   const subjects = [
     {
         name:"Mathematics",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-calculator-simple"></i>,
         bg: "bg-red-400",
         hoverBg: "hover:bg-red-500"
     },
     {
         name:"Biology",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-bacteria"></i>,
         bg: "bg-orange-400",
         hoverBg: "hover:bg-orange-500"
     },
     {
         name:"Chemistry",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-flask-potion"></i>,
         bg: "bg-green-400",
         hoverBg: "hover:bg-green-500"
     },
     {
         name:"Physics",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i className="fi fi-tr-rocket-lunch"></i>,
         bg: "bg-purple-400",
         hoverBg: "hover:bg-purple-500"
     },
     {
         name:"Literature",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-diary-bookmark-down"></i>,
         bg: "bg-blue-400",
         hoverBg: "hover:bg-orange-500"
     },
     {
         name:"English",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-answer-alt"></i>,
         bg: "bg-rose-400",
         hoverBg: "hover:bg-rose-500"
     },
     {
         name:"Economics",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-stats"></i>,
         bg: "bg-emerald-400",
         hoverBg: "hover:bg-emerald-500"
     },
     {
         name:"Government",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-government-flag"></i>,
         bg: "bg-orange-400",
         hoverBg: "hover:bg-orange-500"
     },
     {
         name:"F Accounting",
-        icon: <i className="fa fa-rocket"></i>,
+        icon: <i class="fi fi-tr-calculator-money"></i>,
         bg: "bg-blue-300",
         hoverBg: "hover:bg-blue-400"
     }
