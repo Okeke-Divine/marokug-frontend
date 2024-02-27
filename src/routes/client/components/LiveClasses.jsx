@@ -27,7 +27,7 @@ function LiveClassComponent({ subject, title, image, instructor, dateTime, style
               <div>{dateTime}</div>
             </div>
             <div>
-              <button className={`rounded-lg border-gray-300 border-2 pt-1 pb-1 pl-3 pr-3 duration-300 ${style.hoverBg} ${style.borderBg} hover:text-white hover:border-blue-400`}>Remind Me</button>
+              <button className={`rounded-lg border-gray-300 border-2 pt-2 pb-2 pl-3 pr-3 duration-300 ${style.hoverBg} ${style.borderBg} hover:text-white hover:border-blue-400 text-sm`}>Remind Me</button>
             </div>
           </div>
         </div>
