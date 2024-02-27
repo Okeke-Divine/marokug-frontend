@@ -9,7 +9,7 @@ export default function ClientLayout({ Config }) {
               <Sidebar Config={Config} />
             </div>
             <div className="flex-1">
-              <ClientRightLayout />
+              <ClientRightLayout Config={Config} />
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@ export default function Sidebar({ Config }) {
       <div className="pt-10 pb-10">
         <div className="flex items-center justify-center gap-3 w-full">
           <div>
-            <img src={SiteLogo} className="w-7" />
+            <img src={SiteLogo} className="w-7" alt={Config.site_name+`'s logo`} />
           </div>
           <div className="flex font-semibold text-3xl justify-center text-white">
             {Config.site_name}

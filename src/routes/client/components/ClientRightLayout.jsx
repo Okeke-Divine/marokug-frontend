@@ -1,8 +1,10 @@
 import ClientNavbarComponent from "./ClientNavbarComponent.jsx";
 import PracticeExam from "./PracticeExam.jsx";
 import LiveClasses from "./LiveClasses.jsx"
+import MultiplayerQuiz from "./multiplayerQuiz.jsx";
+import ClientFooter from "./ClientFooter.jsx";
 
-export default function ClientRightLayout() {
+export default function ClientRightLayout({Config}) {
   const overviewData = [
     {
       title: "78%",
@@ -152,10 +154,14 @@ export default function ClientRightLayout() {
               <PracticeExam />
               {/* live classes */}
               <LiveClasses />
+              {/* multiplayer quiz */}
+              <MultiplayerQuiz />
             </div>
           </div>
           <div className="w-full lg:w-2/5">s</div>
         </div>
+        {/* footer */}
+        <ClientFooter Config={Config} />
       </div>
     </>
   );
