@@ -28,7 +28,7 @@ export default function ClientNavbarComponent() {
             <div className="flex gap-x-2 items-center">
               <div>
                 <div className="font-bold">John Doe</div>
-                <div className="text-gray-400 text-xs">SS3 (WAEC</div>
+                <div className="text-gray-400 text-xs">SS3 (WAEC)</div>
               </div>
               <div>
                 <i className="fi fi-tr-caret-down"></i>
