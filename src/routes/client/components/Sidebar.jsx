@@ -1,6 +1,33 @@
 import SiteLogo from "../../../assets/images/marokug-logo.png";
+import { useState, useEffect } from "react";
 
 export default function Sidebar({ Config }) {
+  const isLargeScreen = window.innerWidth >= 768; // Check if the screen is large
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(isLargeScreen);
+  // Toggle sidebar expansion state
+  const toggleSidebar = () => {
+    setIsSidebarExpanded(!isSidebarExpanded);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsSidebarExpanded(true); // Expand sidebar on large screens
+      } else {
+        setIsSidebarExpanded(false); // Minimize sidebar on small screens
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   const sideBarLinks = [
     {
       name: "Home",
@@ -64,7 +91,7 @@ export default function Sidebar({ Config }) {
   ];
   return (
     <>
-      <div className="overflow-y-auto bg-gray-800 hidden md:block">
+      <div className={`fixed top-0 ${isSidebarExpanded ? 'left-0' : '-left-full'} w-[260px] z-50 overflow-y-auto duration-300 md:w-[260px] h-[100vh] bg-gray-800 md:block`}>
         {/* name and logo */}
         <div className="pt-10 pb-10">
           <a className="cursor-pointer" href="/">
@@ -126,8 +153,8 @@ export default function Sidebar({ Config }) {
         </div>
       </div>
       {/* sidebar visibility toggle component */}
-      <div className="flex md:hidden fixed bottom-5 left-5 rounded-full bg-blue-400 hover:bg-blue-500 text-white items-center justify-center w-10 h-10 cursor-pointer shadow-sm hover:shadow-md shadow-gray-400 hover:shadow-gray-400 duration-300">
-        <i className="fi fi-tr-bars-staggered relative top-[0.1rem] cursor-pointer"></i>
+      <div className={`flex md:hidden fixed bottom-5 ${isSidebarExpanded ? 'left-[17rem]' : 'left-5'} rounded-full bg-blue-400 hover:bg-blue-500 text-white items-center justify-center w-10 h-10 cursor-pointer shadow-sm hover:shadow-md shadow-gray-400 hover:shadow-gray-400 duration-300`} onClick={toggleSidebar}>
+        <i className={`fi ${isSidebarExpanded ? 'fi-tr-close' : 'fi-tr-bars-staggered'} relative top-[0.1rem] cursor-pointer`}></i>
       </div>
     </>
   );
