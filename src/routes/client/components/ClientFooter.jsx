@@ -5,7 +5,7 @@ function CreateLink({ href, linkname }) {
     <a
       href={href}
       target="_blank"
-      className="block w-fit mt-2 text-gray-400 hover:text-white hover:border-b-2 hover:border-white duration-100"
+      className="block w-fit mt-2 md:mt-0 text-gray-400 hover:text-white hover:border-b-2 hover:border-white duration-100"
     >
       {linkname}
     </a>
@@ -16,9 +16,9 @@ export default function ClientFooter({ Config }) {
   return (
     <>
       <div>
-        <div className="w-full bg-gray-700 p-10 pt-10 pb-5 mt-5 text-white">
+        <div className="w-full bg-gray-700 p-10 pt-10 pb-10 mt-5 text-white">
           <div className="block md:grid lg:grid md:grid-cols-2 lg:grid-cols-5 md:gap-5 lg:gap-5">
-            <div>
+            <div className="mb-5 md:md-0">
               <div className="flex gap-3 items-center">
                 <div>
                   <img
@@ -47,7 +47,8 @@ export default function ClientFooter({ Config }) {
                 </div>
               </div>
             </div>
-            <div>
+            {/* company */}
+            <div className="mb-5 md:md-0 my-word-break-all">
               <div className="font-bold text-xl">Company</div>
               <div className="mt-3">
                 <CreateLink href="#" linkname="About Us" />
@@ -56,7 +57,8 @@ export default function ClientFooter({ Config }) {
                 <CreateLink href="#" linkname="Testimonials" />
               </div>
             </div>
-            <div>
+            {/* support */}
+            <div className="mb-5 md:md-0 my-word-break-all">
               <div className="font-bold text-xl">Support</div>
               <div className="mt-3">
                 <CreateLink href="#" linkname="Help Center" />
@@ -64,7 +66,8 @@ export default function ClientFooter({ Config }) {
                 <CreateLink href="#" linkname="Feedback" />
               </div>
             </div>
-            <div>
+            {/* links */}
+            <div className="mb-5 md:md-0 my-word-break-all">
               <div className="font-bold text-xl">Links</div>
               <div className="mt-3">
                 <CreateLink href="#" linkname="Courses" />
@@ -73,19 +76,21 @@ export default function ClientFooter({ Config }) {
                 <CreateLink href="#" linkname="All in One" />
               </div>
             </div>
-            <div>
+            {/* contact us */}
+            <div className="mb-5 md:md-0 my-word-break-all">
               <div className="font-bold text-xl">Contact Us</div>
-              <div className="mt-3">
+              <div className="mt-3 text-wrap">
                 <CreateLink href="#" linkname="(234) 7453827569" />
                 <CreateLink href="#" linkname="support@marokug.com" />
               </div>
             </div>
           </div>
+          {/* hr */}
           <div className="mt-3 mb-3">
             <hr />
           </div>
           {/* footer second layout - bottom */}
-          <div className="mt-5 block md:flex md:flex-wrap md:gap-5">
+          <div className="mt-5 block md:flex md:flex-wrap md:gap-5 items-center">
             <div>&copy; by Marokug. All right reserved.</div>
             <div className="block md:flex md:flex-wrap md:gap-3">
               <div><CreateLink href="#" linkname={'Privacy Policy'} /></div>

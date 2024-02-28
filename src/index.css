@@ -11,6 +11,7 @@
   /* font-family: "Kode Mono", monospace; */
   font-family: "Anta", sans-serif;
   letter-spacing: 0.5px;
+  outline: none;
 }
 
 ::-webkit-scrollbar {
@@ -29,4 +30,8 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.my-word-break-all{
+  word-break: break-all;
 }

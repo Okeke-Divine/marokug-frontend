@@ -1,10 +1,10 @@
 import ClientNavbarComponent from "./ClientNavbarComponent.jsx";
 import PracticeExam from "./PracticeExam.jsx";
-import LiveClasses from "./LiveClasses.jsx"
+import LiveClasses from "./LiveClasses.jsx";
 import MultiplayerQuiz from "./multiplayerQuiz.jsx";
 import ClientFooter from "./ClientFooter.jsx";
 
-export default function ClientRightLayout({Config}) {
+export default function ClientRightLayout({ Config }) {
   const overviewData = [
     {
       title: "78%",
@@ -41,63 +41,63 @@ export default function ClientRightLayout({Config}) {
   ];
   const subjects = [
     {
-        name:"Mathematics",
-        icon: <i className="fi fi-tr-calculator-simple"></i>,
-        bg: "bg-red-400",
-        hoverBg: "hover:bg-red-500"
+      name: "Mathematics",
+      icon: <i className="fi fi-tr-calculator-simple"></i>,
+      bg: "bg-red-400",
+      hoverBg: "hover:bg-red-500",
     },
     {
-        name:"Biology",
-        icon: <i className="fi fi-tr-bacteria"></i>,
-        bg: "bg-orange-400",
-        hoverBg: "hover:bg-orange-500"
+      name: "Biology",
+      icon: <i className="fi fi-tr-bacteria"></i>,
+      bg: "bg-orange-400",
+      hoverBg: "hover:bg-orange-500",
     },
     {
-        name:"Chemistry",
-        icon: <i className="fi fi-tr-flask-potion"></i>,
-        bg: "bg-green-400",
-        hoverBg: "hover:bg-green-500"
+      name: "Chemistry",
+      icon: <i className="fi fi-tr-flask-potion"></i>,
+      bg: "bg-green-400",
+      hoverBg: "hover:bg-green-500",
     },
     {
-        name:"Physics",
-        icon: <i className="fi fi-tr-rocket-lunch"></i>,
-        bg: "bg-purple-400",
-        hoverBg: "hover:bg-purple-500"
+      name: "Physics",
+      icon: <i className="fi fi-tr-rocket-lunch"></i>,
+      bg: "bg-purple-400",
+      hoverBg: "hover:bg-purple-500",
     },
     {
-        name:"Literature",
-        icon: <i className="fi fi-tr-diary-bookmark-down"></i>,
-        bg: "bg-blue-400",
-        hoverBg: "hover:bg-orange-500"
+      name: "Literature",
+      icon: <i className="fi fi-tr-diary-bookmark-down"></i>,
+      bg: "bg-blue-400",
+      hoverBg: "hover:bg-orange-500",
     },
     {
-        name:"English",
-        icon: <i className="fi fi-tr-answer-alt"></i>,
-        bg: "bg-rose-400",
-        hoverBg: "hover:bg-rose-500"
+      name: "English",
+      icon: <i className="fi fi-tr-answer-alt"></i>,
+      bg: "bg-rose-400",
+      hoverBg: "hover:bg-rose-500",
     },
     {
-        name:"Economics",
-        icon: <i className="fi fi-tr-stats"></i>,
-        bg: "bg-emerald-400",
-        hoverBg: "hover:bg-emerald-500"
+      name: "Economics",
+      icon: <i className="fi fi-tr-stats"></i>,
+      bg: "bg-emerald-400",
+      hoverBg: "hover:bg-emerald-500",
     },
     {
-        name:"Government",
-        icon: <i className="fi fi-tr-government-flag"></i>,
-        bg: "bg-orange-400",
-        hoverBg: "hover:bg-orange-500"
+      name: "Government",
+      icon: <i className="fi fi-tr-government-flag"></i>,
+      bg: "bg-orange-400",
+      hoverBg: "hover:bg-orange-500",
     },
     {
-        name:"F Accounting",
-        icon: <i className="fi fi-tr-calculator-money"></i>,
-        bg: "bg-blue-300",
-        hoverBg: "hover:bg-blue-400"
-    }
+      name: "F Accounting",
+      icon: <i className="fi fi-tr-calculator-money"></i>,
+      bg: "bg-blue-300",
+      hoverBg: "hover:bg-blue-400",
+    },
   ];
   return (
     <>
-      <div className="h-screen overflow-y-auto">
+      <div className="">
         {/* navbar */}
         <div>
           <ClientNavbarComponent />
@@ -120,7 +120,10 @@ export default function ClientRightLayout({Config}) {
               {/* data summary */}
               <div className="grid gird-cols-1 lg:grid-cols-4 mt-5 gap-5">
                 {overviewData.map((data, index) => (
-                  <div key={index} className="bg-white hover:shadow-lg cursor-pointer shadow-md">
+                  <div
+                    key={index}
+                    className="bg-white hover:shadow-lg cursor-pointer shadow-md"
+                  >
                     <div className="p-5">
                       <div className="w-full text-center">
                         <h2 className={`${data.style.text} text-3xl`}>
@@ -141,11 +144,14 @@ export default function ClientRightLayout({Config}) {
                   <h2 className="font-bold text-xl">Watch Video Lesson</h2>
                   {/* video lessons container */}
                   <div className="grid gird-cols-1 lg:grid-cols-3 gap-5 mt-3">
-                    {subjects.map((subject,index) => (
-                        <div key={index} className={`${subject.bg} ${subject.hoverBg} duration-300 rounded-lg p-5 pt-4 pb-4 cursor-pointer text-white`}>
-                            <div className="text-left mb-2">{subject.icon}</div>
-                            <div className="text-right">{subject.name}</div>
-                        </div>
+                    {subjects.map((subject, index) => (
+                      <div
+                        key={index}
+                        className={`${subject.bg} ${subject.hoverBg} duration-300 rounded-lg p-5 pt-4 pb-4 cursor-pointer text-white`}
+                      >
+                        <div className="text-left mb-2">{subject.icon}</div>
+                        <div className="text-right">{subject.name}</div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -158,7 +164,9 @@ export default function ClientRightLayout({Config}) {
               <MultiplayerQuiz />
             </div>
           </div>
-          <div className="w-full lg:w-2/5">s</div>
+          <div className="w-full lg:w-2/5">
+            <div className="pl-5 pr-5 mt-5 md:mt-0">RIGHT COMPONENT</div>
+          </div>
         </div>
         {/* footer */}
         <ClientFooter Config={Config} />

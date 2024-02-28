@@ -63,60 +63,70 @@ export default function Sidebar({ Config }) {
     },
   ];
   return (
-    <div className="h-screen overflow-y-auto bg-gray-800 hidden md:block">
-      {/* name and logo */}
-      <div className="pt-10 pb-10">
-        <div className="flex items-center justify-center gap-3 w-full">
-          <div>
-            <img src={SiteLogo} className="w-7" alt={Config.site_name+`'s logo`} />
+    <>
+      <div className="overflow-y-auto bg-gray-800 hidden md:block">
+        {/* name and logo */}
+        <div className="pt-10 pb-10">
+          <div className="flex items-center justify-center gap-3 w-full">
+            <div>
+              <img
+                src={SiteLogo}
+                className="w-7"
+                alt={Config.site_name + `'s logo`}
+              />
+            </div>
+            <div className="flex font-semibold text-3xl justify-center text-white">
+              {Config.site_name}
+            </div>
           </div>
-          <div className="flex font-semibold text-3xl justify-center text-white">
-            {Config.site_name}
+        </div>
+        {/* side bar links */}
+        <div className="pl-5 pr-5">
+          {sideBarLinks.map((link, index) => (
+            <div
+              key={index}
+              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
+                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
+              }`}
+            >
+              <div>{link.icon}</div>
+              <div>{link.name}</div>
+            </div>
+          ))}
+          <div className="p-5">
+            <hr className="" />
           </div>
+          {paymentLinks.map((link, index) => (
+            <div
+              key={index}
+              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
+                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
+              }`}
+            >
+              <div>{link.icon}</div>
+              <div>{link.name}</div>
+            </div>
+          ))}
+          <div className="p-5">
+            <hr className="" />
+          </div>
+          {contactLinks.map((link, index) => (
+            <div
+              key={index}
+              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
+                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
+              }`}
+            >
+              <div>{link.icon}</div>
+              <div>{link.name}</div>
+            </div>
+          ))}
         </div>
       </div>
-      {/* side bar links */}
-      <div className="pl-5 pr-5">
-        {sideBarLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
-                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
-              }`}
-            >
-              <div>{link.icon}</div>
-              <div>{link.name}</div>
-            </div>
-        ))}
-        <div className="p-5">
-          <hr className="" />
-        </div>
-        {paymentLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
-                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
-              }`}
-            >
-              <div>{link.icon}</div>
-              <div>{link.name}</div>
-            </div>
-        ))}
-        <div className="p-5">
-          <hr className="" />
-        </div>
-        {contactLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
-                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
-              }`}
-            >
-              <div>{link.icon}</div>
-              <div>{link.name}</div>
-            </div>
-        ))}
+      {/* sidebar visibility toggle component */}
+      <div className="flex md:hidden fixed bottom-5 left-5 rounded-full bg-blue-400 hover:bg-blue-500 text-white items-center justify-center w-10 h-10 cursor-pointer shadow-sm hover:shadow-md shadow-gray-400 hover:shadow-gray-400 duration-300">
+        <i className="fi fi-tr-bars-staggered relative top-[0.1rem] cursor-pointer"></i>
       </div>
-    </div>
+    </>
   );
 }
