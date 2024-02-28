@@ -53,8 +53,7 @@ export default function ClientFooter({ Config }) {
                 <div className="font-bold text-2xl">{Config.site_name}</div>
               </div>
               <div className="text-gray-300 mt-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi neque pariatur culpa saepe.
+              Unlock Your Learning Potential with Marokug - The Ultimate Educational Platform
               </div>
               <div className="mt-3">
                 <div className="flex gap-x-5">
@@ -112,7 +111,7 @@ export default function ClientFooter({ Config }) {
           </div>
           {/* footer second layout - bottom */}
           <div className="mt-5 block md:flex md:flex-wrap md:gap-5 items-center">
-            <div>&copy; by Marokug. All right reserved.</div>
+            <div>&copy; (2024) Marokug. All right reserved.</div>
             <div className="block md:flex md:flex-wrap md:gap-3">
               <div>
                 <CreateLink href="#" linkname={"Privacy Policy"} />
