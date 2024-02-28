@@ -91,7 +91,7 @@ export default function Sidebar({ Config }) {
   ];
   return (
     <>
-      <div className={`fixed top-0 ${isSidebarExpanded ? 'left-0' : '-left-full'} w-[260px] z-50 overflow-y-auto duration-300 md:w-[260px] h-[100vh] bg-gray-800 md:block`}>
+      <div className={`fixed top-0 ${isSidebarExpanded ? 'left-0' : '-left-full'} w-[260px] z-50 overflow-y-auto duration-300 md:w-[260px] h-[100%] bg-gray-800 md:block`}>
         {/* name and logo */}
         <div className="pt-10 pb-10">
           <a className="cursor-pointer" href="/">
