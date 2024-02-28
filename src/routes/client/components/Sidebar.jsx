@@ -154,7 +154,7 @@ export default function Sidebar({ Config }) {
       </div>
       {/* sidebar visibility toggle component */}
       <div className={`flex md:hidden fixed bottom-5 ${isSidebarExpanded ? 'left-[17rem]' : 'left-5'} rounded-full bg-blue-400 hover:bg-blue-500 text-white items-center justify-center w-10 h-10 cursor-pointer shadow-sm hover:shadow-md shadow-gray-400 hover:shadow-gray-400 duration-300`} onClick={toggleSidebar}>
-        <i className={`fi ${isSidebarExpanded ? 'fi-tr-close' : 'fi-tr-bars-staggered'} relative top-[0.1rem] cursor-pointer`}></i>
+        <i className={`fi ${isSidebarExpanded ? 'fi fi-tr-circle-xmark' : 'fi-tr-bars-staggered'} relative top-[0.15rem] cursor-pointer`}></i>
       </div>
     </>
   );

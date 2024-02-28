@@ -15,7 +15,7 @@ export default function ClientNavbarComponent() {
           </button>
         </div>
         {/* navbar right section */}
-        <div className="flex gap-x-2 md:gap-x-10 items-center">
+        <div className="flex gap-x-1 md:gap-x-10 items-center">
           <div>
             <div className="cursor-pointer hover:bg-gray-100 duration-300 box-border p-2 rounded-xl">
               <i className="fi fi-tr-bells text-xl relative top-1"></i>

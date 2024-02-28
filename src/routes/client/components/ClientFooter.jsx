@@ -13,6 +13,29 @@ function CreateLink({ href, linkname }) {
 }
 
 export default function ClientFooter({ Config }) {
+  const socials = [
+    {
+      name: "Facebook",
+      icon: <i class="fi fi-brands-facebook"></i>,
+      url: "#",
+    },
+    {
+      name: "Twitter (X)",
+      icon: <i class="fi fi-brands-twitter-alt-circle"></i>,
+      url: "#",
+    },
+    {
+      name: "Instagram",
+      icon: <i class="fi fi-brands-instagram"></i>,
+      url: "#",
+    },
+    {
+      name: "Linkedin",
+      icon: <i class="fi fi-brands-linkedin"></i>,
+      url: "#",
+    },
+  ];
+
   return (
     <>
       <div>
@@ -29,21 +52,19 @@ export default function ClientFooter({ Config }) {
                 </div>
                 <div className="font-bold text-2xl">{Config.site_name}</div>
               </div>
-              <div className="text-gray-300 mt-2">
+              <div className="text-gray-300 mt-3">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Eligendi neque pariatur culpa saepe.
               </div>
-              <div className="mt-5">
-                <div className="flex justify-between gap-3">
-                  <div className="cursor-pointer">
-                    <i className=""></i>
-                  </div>
-                  <div className="cursor-pointer">
-                    <i className=""></i>
-                  </div>
-                  <div className="cursor-pointer">
-                    <i className=""></i>
-                  </div>
+              <div className="mt-3">
+                <div className="flex gap-x-5">
+                  {socials.map((social, index) => (
+                    <a href={social.url} target="_blank">
+                      <div className="cursor-pointer" key={index}>
+                        {social.icon}
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -93,10 +114,18 @@ export default function ClientFooter({ Config }) {
           <div className="mt-5 block md:flex md:flex-wrap md:gap-5 items-center">
             <div>&copy; by Marokug. All right reserved.</div>
             <div className="block md:flex md:flex-wrap md:gap-3">
-              <div><CreateLink href="#" linkname={'Privacy Policy'} /></div>
-              <div><CreateLink href="#" linkname={'Terms of Use'} /></div>
-              <div><CreateLink href="#" linkname={'Legal'} /></div>
-              <div><CreateLink href="#" linkname={'Site Map'} /></div>
+              <div>
+                <CreateLink href="#" linkname={"Privacy Policy"} />
+              </div>
+              <div>
+                <CreateLink href="#" linkname={"Terms of Use"} />
+              </div>
+              <div>
+                <CreateLink href="#" linkname={"Legal"} />
+              </div>
+              <div>
+                <CreateLink href="#" linkname={"Site Map"} />
+              </div>
             </div>
           </div>
         </div>
