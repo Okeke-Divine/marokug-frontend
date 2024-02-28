@@ -3,6 +3,7 @@ import PracticeExam from "./PracticeExam.jsx";
 import LiveClasses from "./LiveClasses.jsx";
 import MultiplayerQuiz from "./multiplayerQuiz.jsx";
 import ClientFooter from "./ClientFooter.jsx";
+import RightSidebar from "./RightSidebar.jsx";
 
 export default function ClientRightLayout({ Config }) {
   const overviewData = [
@@ -165,7 +166,7 @@ export default function ClientRightLayout({ Config }) {
             </div>
           </div>
           <div className="w-full lg:w-2/5">
-            <div className="pl-5 pr-5 mt-5 md:mt-0">RIGHT COMPONENT</div>
+            <RightSidebar />
           </div>
         </div>
         {/* footer */}
