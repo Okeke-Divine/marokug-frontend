@@ -6,7 +6,7 @@ import img4 from "../../../assets/images/borrowed/Pelumi.png";
 function LiveClassComponent({ subject, title, image, instructor, dateTime, style }) {
   return (
     <>
-      <div className="group">
+      <div className="group mt-5 md:mt-0">
         <div className="">
           <img src={image} className="rounded-lg rounded-b-none" />
         </div>
@@ -106,7 +106,7 @@ export default function LiveClasses() {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 mt-5">
+      <div className="block md:grid md:grid-cols-2 md:gap-5 mt-5">
         {upcomingLiveClasses.map((liveClass, index) => (
           <LiveClassComponent
             key={index}

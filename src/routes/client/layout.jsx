@@ -5,7 +5,7 @@ export default function ClientLayout({ Config }) {
   return (
         <div className="h-screen overflow-y-auto bg-gray-100">
           <div className="flex h-screen overflow-y-auto">
-            <div className="w-[260px] border-r-2 border-gray-200 h-[100vh]">
+            <div className="w-0 duration-300 md:w-[260px] h-[100vh]">
               <Sidebar Config={Config} />
             </div>
             <div className="flex-1">

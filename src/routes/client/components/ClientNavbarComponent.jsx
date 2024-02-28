@@ -3,12 +3,12 @@ import avartar from "../../../assets/images/avartar/male.jpg";
 export default function ClientNavbarComponent() {
   return (
     <>
-      <div className="sticky top-0 bg-white p-5 flex justify-between items-center border-b-2 border-gray-100">
+      <div className="sticky top-0 bg-white p-5 flex justify-between items-center">
         <div className="p-2 pr-3 pl-3 rounded-xl border-gray-200 border-2 flex gap-x-2 wd-fit">
           <input
             type="search"
             placeholder="What would you like to learn?"
-            className="bg-transparent w-80 outline-none"
+            className="bg-transparent w-[8rem] md:w-40 lg:w-80 outline-none"
           />
           <button>
           <i className="fi fi-rr-search"></i>

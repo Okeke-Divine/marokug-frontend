@@ -63,7 +63,7 @@ export default function Sidebar({ Config }) {
     },
   ];
   return (
-    <div className="h-screen overflow-y-auto bg-gray-800">
+    <div className="h-screen overflow-y-auto bg-gray-800 hidden md:block">
       {/* name and logo */}
       <div className="pt-10 pb-10">
         <div className="flex items-center justify-center gap-3 w-full">

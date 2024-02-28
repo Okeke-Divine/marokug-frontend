@@ -1,32 +1,32 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap'); */
-
-*:not(i){
-    /* font-family: 'Brawler', sans-serif; */
-    font-family: "Kode Mono", monospace;
-    /* font-family: "Anta", sans-serif; */
+*:not(i) {
+  /* font-family: 'Brawler', sans-serif; */
+  /* font-family: "Kode Mono", monospace; */
+  font-family: "Anta", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 2px;
+  width: 5px;
+  height: 2px;
 }
-  
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 30px;
 
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
