@@ -67,18 +67,20 @@ export default function Sidebar({ Config }) {
       <div className="overflow-y-auto bg-gray-800 hidden md:block">
         {/* name and logo */}
         <div className="pt-10 pb-10">
-          <div className="flex items-center justify-center gap-3 w-full">
-            <div>
-              <img
-                src={SiteLogo}
-                className="w-7"
-                alt={Config.site_name + `'s logo`}
-              />
+          <a className="cursor-pointer" href="/">
+            <div className="flex items-center justify-center gap-3 w-full">
+              <div>
+                <img
+                  src={SiteLogo}
+                  className="w-7"
+                  alt={Config.site_name + `'s logo`}
+                />
+              </div>
+              <div className="flex font-semibold text-3xl justify-center text-white">
+                {Config.site_name}
+              </div>
             </div>
-            <div className="flex font-semibold text-3xl justify-center text-white">
-              {Config.site_name}
-            </div>
-          </div>
+          </a>
         </div>
         {/* side bar links */}
         <div className="pl-5 pr-5">
