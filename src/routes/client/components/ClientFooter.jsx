@@ -110,7 +110,7 @@ export default function ClientFooter({ Config }) {
             <hr />
           </div>
           {/* footer second layout - bottom */}
-          <div className="mt-5 block md:flex md:flex-wrap md:gap-5 items-center">
+          <div className="mt-5 block md:flex md:flex-wrap md:gap-5 items-center justify-between">
             <div>&copy; (2024) Marokug. All right reserved.</div>
             <div className="block md:flex md:flex-wrap md:gap-3">
               <div>
@@ -126,6 +126,10 @@ export default function ClientFooter({ Config }) {
                 <CreateLink href="#" linkname={"Site Map"} />
               </div>
             </div>
+          </div>
+          {/* built by */}
+          <div className="mt-3 text-gray-300">
+            Built by <a href="https://okekedivine.vercel.app/" target="_blank" className="text-white">Dev Divine</a>
           </div>
         </div>
       </div>
