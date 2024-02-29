@@ -8,7 +8,7 @@ import RightSidebar from "./RightSidebar.jsx";
 export default function ClientRightLayout({ Config }) {
   const overviewData = [
     {
-      title: "78%",
+      title: "6",
       text: "Courses in Progress",
       style: {
         bg: "bg-red-600",
@@ -17,14 +17,14 @@ export default function ClientRightLayout({ Config }) {
     },
     {
       title: "25",
-      text: "Courses Complete",
+      text: "Courses Completed",
       style: {
         bg: "bg-blue-600",
         text: "text-blue-600",
       },
     },
     {
-      title: "78%",
+      title: "2",
       text: "Certificates Earned",
       style: {
         bg: "bg-yellow-300",

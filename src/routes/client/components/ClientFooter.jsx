@@ -16,22 +16,22 @@ export default function ClientFooter({ Config }) {
   const socials = [
     {
       name: "Facebook",
-      icon: <i class="fi fi-brands-facebook"></i>,
+      icon: <i className="fi fi-brands-facebook"></i>,
       url: "#",
     },
     {
       name: "Twitter (X)",
-      icon: <i class="fi fi-brands-twitter-alt-circle"></i>,
+      icon: <i className="fi fi-brands-twitter-alt-circle"></i>,
       url: "#",
     },
     {
       name: "Instagram",
-      icon: <i class="fi fi-brands-instagram"></i>,
+      icon: <i className="fi fi-brands-instagram"></i>,
       url: "#",
     },
     {
       name: "Linkedin",
-      icon: <i class="fi fi-brands-linkedin"></i>,
+      icon: <i className="fi fi-brands-linkedin"></i>,
       url: "#",
     },
   ];
@@ -58,7 +58,7 @@ export default function ClientFooter({ Config }) {
               <div className="mt-3">
                 <div className="flex gap-x-5">
                   {socials.map((social, index) => (
-                    <a href={social.url} target="_blank">
+                    <a key={index} href={social.url} target="_blank">
                       <div className="cursor-pointer" key={index}>
                         {social.icon}
                       </div>
@@ -92,8 +92,8 @@ export default function ClientFooter({ Config }) {
               <div className="mt-3">
                 <CreateLink href="#" linkname="Courses" />
                 <CreateLink href="#" linkname="Become an Instructor" />
-                <CreateLink href="#" linkname="Service" />
-                <CreateLink href="#" linkname="All in One" />
+                <CreateLink href="#" linkname="Services" />
+                <CreateLink href="#" linkname="Mini Tools" />
               </div>
             </div>
             {/* contact us */}

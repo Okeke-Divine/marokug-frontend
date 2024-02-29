@@ -59,12 +59,17 @@ export default function RightSidebar() {
     <>
       <div className="pl-5 pr-5 mt-5 md:mt-0">
         <div className="rounded-lg bg-white p-3 shadow-sm hover:shadow-md duration-300">
-          <div className="font-bold text-xl">Todo</div>
+          <div className="flex gap-x-2 justify-between items-center">
+            <div className="font-bold text-xl">Todo</div>
+            <div className="cursor-pointer hover:bg-gray-100 rounded-lg p-2 pl-3 pr-3 duration-300">
+              <i className="fi fi-tr-square-plus"></i>
+            </div>
+          </div>
           <div className="">
             <div className="flex justify-center items-center pt-20 pb-20">
               <div>
                 <div className="text-gray-500 flex justify-center text-3xl font-bold">
-                  <i class="fi fi-tr-diamond-exclamation"></i>
+                  <i className="fi fi-tr-diamond-exclamation"></i>
                 </div>
                 <div className="text-gray-500">Nothing is here</div>
               </div>
@@ -80,9 +85,10 @@ export default function RightSidebar() {
           <div className="font-bold text-xl">Course Progress</div>
           <div className="mt-3">
             {courseProgress.map((progress, index) => (
-              <div key={index} className="mb-3">
-                <div className="text-gray-900">
-                  {progress.name} ({progress.progress}%)
+              <div key={index} className="mb-4">
+                <div className="text-gray-900 flex justify-between items-center">
+                  <div>{progress.name}</div>
+                  <div className="text-gray-500 text-xs">({progress.progress}%)</div>
                 </div>
                 <div className="w-full h-3 rounded-lg bg-gray-300">
                   <div
@@ -100,7 +106,7 @@ export default function RightSidebar() {
             <div className="flex justify-center items-center pt-20 pb-20">
               <div>
                 <div className="text-gray-500 flex justify-center text-3xl font-bold">
-                  <i class="fi fi-tr-diamond-exclamation"></i>
+                  <i className="fi fi-tr-diamond-exclamation"></i>
                 </div>
                 <div className="text-gray-500">Nothing is here</div>
               </div>
@@ -111,7 +117,7 @@ export default function RightSidebar() {
         <div className="rounded-lg bg-white mt-5 pt-10 pb-10 p-10 shadow-sm hover:shadow-md duration-300">
           <div className="font-bold text-xl">
             Download Report
-            <i class="fi fi-tr-chart-line-up text-sm ml-2"></i>
+            <i className="fi fi-tr-chart-line-up text-sm ml-2"></i>
           </div>
           <div className="mt-3 text-gray-500">
             Your Report: Comprehensive Insights, Detailed Analysis, and
