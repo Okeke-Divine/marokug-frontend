@@ -88,7 +88,9 @@ export default function RightSidebar() {
               <div key={index} className="mb-4">
                 <div className="text-gray-900 flex justify-between items-center">
                   <div>{progress.name}</div>
-                  <div className="text-gray-500 text-xs">({progress.progress}%)</div>
+                  <div className="text-gray-500 text-xs">
+                    ({progress.progress}%)
+                  </div>
                 </div>
                 <div className="w-full h-3 rounded-lg bg-gray-300">
                   <div
@@ -135,6 +137,12 @@ export default function RightSidebar() {
           <div className="mt-3 text-gray-500">
             Technology that helps people complete tasks faster and more
             efficiently.
+          </div>
+          <div className="mt-3">
+            <button className="uppercase pt-3 pb-3 pl-6 pr-6 rounded-lg bg-gray-700 text-white hover:bg-gray-900 duration-300 cursor-pointer w-fit">
+              Premium
+              <i class="fi fi-tr-user-crown pl-2"></i>
+            </button>
           </div>
         </div>
       </div>
