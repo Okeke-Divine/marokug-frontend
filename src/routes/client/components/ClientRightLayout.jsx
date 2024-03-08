@@ -131,7 +131,7 @@ export default function ClientRightLayout({ Config }) {
                           {data.title}
                         </h2>
                       </div>
-                      <div className="w-full text-center">
+                      <div className="w-full text-center my-word-break-all">
                         <p>{data.text}</p>
                       </div>
                     </div>

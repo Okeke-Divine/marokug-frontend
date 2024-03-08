@@ -1,7 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import avartar from "../../../assets/images/avartar/male.jpg";
+import axios_instance from "../../../utils/axios.js";
+import LogoutComponent from "./logout-component.jsx";
 
 export default function ClientNavbarComponent() {
+  const [levels, setLevels] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios_instance.get("api/v1/levels/");
+        setLevels(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const [accountDropdownOpen, setAccountDropdownOpen] = useState(false);
   const [notificationDropdownOpen, setNotificationDropdownOpen] =
     useState(false);
@@ -37,7 +56,7 @@ export default function ClientNavbarComponent() {
               <i className="fi fi-tr-bells text-xl relative top-1"></i>
             </div>
             {/* notification dropdown */}
-            <div className="absolute right-0 top-[4.6rem] w-[250px]">
+            <div className="absolute -right-20 top-[4.6rem] w-[250px]">
               <div
                 className={`${
                   notificationDropdownOpen ? "block" : "hidden"
@@ -83,29 +102,36 @@ export default function ClientNavbarComponent() {
               >
                 <div className="flex gap-x-2 p-3 pl-5 pr-5 cursor-pointer hover:bg-gray-100">
                   <div>
-                    <i class="fi fi-ts-refer"></i>
+                    <i className="fi fi-tr-chalkboard-user"></i>
+                  </div>
+                  <div>
+                    <select className="bg-transparent">
+                      {levels.map((level, index) => (
+                        <option key={index}>{level.level_name}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="flex gap-x-2 p-3 pl-5 pr-5 cursor-pointer hover:bg-gray-100">
+                  <div>
+                    <i className="fi fi-ts-refer"></i>
                   </div>
                   <div>Refer</div>
                 </div>
                 <div className="flex gap-x-2 p-3 pl-5 pr-5 cursor-pointer hover:bg-gray-100">
                   <div>
-                    <i class="fi fi-ts-admin-alt"></i>
+                    <i className="fi fi-ts-admin-alt"></i>
                   </div>
                   <div>Settings</div>
                 </div>
                 <div className="flex gap-x-2 p-3 pl-5 pr-5 cursor-pointer hover:bg-gray-100">
                   <div>
-                  <i class="fi fi-tr-user-crown"></i>
+                    <i className="fi fi-tr-user-crown"></i>
                   </div>
                   <div>Premium</div>
                 </div>
                 <hr />
-                <div className="flex gap-x-2 p-3 pl-5 pr-5 cursor-pointer hover:bg-gray-100">
-                  <div>
-                    <i class="fi fi-rs-sign-out-alt"></i>
-                  </div>
-                  <div>Logout</div>
-                </div>
+                <LogoutComponent code={1} />
               </div>
             </div>
           </div>

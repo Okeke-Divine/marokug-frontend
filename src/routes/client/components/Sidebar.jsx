@@ -1,5 +1,7 @@
-import SiteLogo from "../../../assets/images/marokug-logo.png";
 import { useState, useEffect } from "react";
+import SidebarLinkComponent from "./sidebar-link-component.jsx";
+
+import SiteLogo from "../../../assets/images/marokug-logo.png";
 
 export default function Sidebar({ Config }) {
   const isLargeScreen = window.innerWidth >= 768; // Check if the screen is large
@@ -19,14 +21,13 @@ export default function Sidebar({ Config }) {
     };
 
     // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup function to remove event listener
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-
 
   const sideBarLinks = [
     {
@@ -91,7 +92,11 @@ export default function Sidebar({ Config }) {
   ];
   return (
     <>
-      <div className={`fixed top-0 ${isSidebarExpanded ? 'left-0' : '-left-full'} w-[260px] z-50 overflow-y-auto duration-300 md:w-[260px] h-[100vh] bg-gray-800 md:block`}>
+      <div
+        className={`fixed top-0 ${
+          isSidebarExpanded ? "left-0" : "-left-full"
+        } w-[260px] z-50 overflow-y-auto duration-300 md:w-[260px] h-[100vh] bg-gray-800 md:block`}
+      >
         {/* name and logo */}
         <div className="pt-10 pb-10">
           <a className="cursor-pointer" href="/">
@@ -112,49 +117,34 @@ export default function Sidebar({ Config }) {
         {/* side bar links */}
         <div className="pl-5 pr-5">
           {sideBarLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
-                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
-              }`}
-            >
-              <div>{link.icon}</div>
-              <div>{link.name}</div>
-            </div>
+            <SidebarLinkComponent key={index} index={index} link={link} />
           ))}
           <div className="p-5">
             <hr className="" />
           </div>
           {paymentLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
-                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
-              }`}
-            >
-              <div>{link.icon}</div>
-              <div>{link.name}</div>
-            </div>
+            <SidebarLinkComponent key={index} index={index} link={link} />
           ))}
           <div className="p-5">
             <hr className="" />
           </div>
           {contactLinks.map((link, index) => (
-            <div
-              key={index}
-              className={`hover:bg-blue-400 hover:text-white duration-300 cursor-pointer flex wd-fit p-2 rounded-lg  gap-x-2  pl-5 pr-5 mb-2 ${
-                link.active == true ? "bg-blue-400 text-white" : "text-gray-500"
-              }`}
-            >
-              <div>{link.icon}</div>
-              <div>{link.name}</div>
-            </div>
+            <SidebarLinkComponent key={index} index={index} link={link} />
           ))}
         </div>
       </div>
       {/* sidebar visibility toggle component */}
-      <div className={`flex md:hidden fixed bottom-5 ${isSidebarExpanded ? 'left-[17rem]' : 'left-5'} rounded-full bg-blue-400 hover:bg-blue-500 text-white items-center justify-center w-10 h-10 cursor-pointer shadow-sm hover:shadow-md shadow-gray-400 hover:shadow-gray-400 duration-300`} onClick={toggleSidebar}>
-        <i className={`fi ${isSidebarExpanded ? 'fi fi-tr-circle-xmark' : 'fi-tr-bars-staggered'} relative top-[0.15rem] cursor-pointer`}></i>
+      <div
+        className={`flex md:hidden fixed bottom-5 ${
+          isSidebarExpanded ? "left-[17rem]" : "left-5"
+        } rounded-full bg-blue-400 hover:bg-blue-500 text-white items-center justify-center w-10 h-10 cursor-pointer shadow-sm hover:shadow-md shadow-gray-400 hover:shadow-gray-400 duration-300`}
+        onClick={toggleSidebar}
+      >
+        <i
+          className={`fi ${
+            isSidebarExpanded ? "fi fi-tr-circle-xmark" : "fi-tr-bars-staggered"
+          } relative top-[0.15rem] cursor-pointer`}
+        ></i>
       </div>
     </>
   );

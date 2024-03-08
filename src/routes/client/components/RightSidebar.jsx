@@ -141,7 +141,7 @@ export default function RightSidebar() {
           <div className="mt-3">
             <button className="uppercase pt-3 pb-3 pl-6 pr-6 rounded-lg bg-gray-700 text-white hover:bg-gray-900 duration-300 cursor-pointer w-fit">
               Premium
-              <i class="fi fi-tr-user-crown pl-2"></i>
+              <i className="fi fi-tr-user-crown pl-2"></i>
             </button>
           </div>
         </div>
